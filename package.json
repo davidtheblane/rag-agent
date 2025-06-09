@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "agent.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ai:test": "node --env-file=.env agent/agent.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "build in node 22",
+  "dependencies": {
+    "@langchain/anthropic": "^0.3.21",
+    "@langchain/core": "^0.3.57",
+    "@langchain/langgraph": "^0.3.0",
+    "@langchain/ollama": "^0.2.1",
+    "zod": "^3.25.51"
+  }
+}
