@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ai:test": "node --env-file=.env agent/agent.js"
+    "ai:test": "node --env-file=.env index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +13,27 @@
   "description": "build in node 22",
   "dependencies": {
     "@langchain/anthropic": "^0.3.21",
+    "@langchain/community": "^0.3.46",
     "@langchain/core": "^0.3.57",
-    "@langchain/langgraph": "^0.3.0",
+    "@langchain/google-genai": "^0.2.12",
+    "@langchain/langgraph": "^0.3.1",
     "@langchain/ollama": "^0.2.1",
+    "@langchain/openai": "^0.5.12",
+    "@langchain/tavily": "^0.1.2",
     "@types/express": "^5.0.3",
     "cors": "^2.8.5",
+    "docker": "^1.0.0",
+    "docker-compose": "^1.2.0",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "i": "^0.3.7",
+    "langchain": "^0.3.28",
+    "npm": "^11.4.2",
+    "pg": "^8.16.0",
+    "typeorm": "^0.3.24",
     "zod": "^3.25.51"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.4"
   }
 }

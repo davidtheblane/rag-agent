@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { agent } from './agent.js'
+import { HumanMessage } from "@langchain/core/messages";
 
 const app = express();
 const port = 3001;
@@ -14,13 +15,13 @@ app.get('/', (req, res) => {
 
 app.post('/generate', async (req, res) => {
     const { prompt, thread_id } = req.body
+    console.log('prompt', prompt)
     const response = await agent.invoke({
-        messages: [{
-            role: 'user',
-            content: prompt
-        }]
+        messages: [new HumanMessage(prompt)],
     },
         { configurable: { thread_id } })
+
+    console.log('response', response.messages.at(-1)?.content)
 
     return res.json(response.messages.at(-1)?.content)
 })
