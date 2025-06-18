@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ai:test": "node --env-file=.env index.js"
+    "ai:test": "npx tsx agent.ts",
+    "start": "npx tsx index.ts"
   },
   "keywords": [],
   "author": "",
@@ -31,9 +32,11 @@
     "npm": "^11.4.2",
     "pg": "^8.16.0",
     "typeorm": "^0.3.24",
+    "typescript": "^5.8.3",
     "zod": "^3.25.51"
   },
   "devDependencies": {
-    "@types/pg": "^8.15.4"
+    "@types/pg": "^8.15.4",
+    "tsx": "^4.20.3"
   }
 }

@@ -16,7 +16,7 @@ const datasource = new DataSource({
 
 try {
     const db = await SqlDatabase.fromDataSourceParams({ appDataSource: datasource, });
-    const clients = await db.run("SELECT COUNT(*) AS total_employees FROM public.clientes WHERE tipo = 'pf'");
+    const clients = await db.run("SELECT * FROM clientes LIMIT 10;");
     console.log('clients', clients);
 } catch (error) {
     console.log('error connecting to db')
